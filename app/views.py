@@ -5,6 +5,7 @@ Werkzeug Documentation:  http://werkzeug.pocoo.org/documentation/
 This file creates your application.
 """
 
+import datetime 
 from app import app
 from flask import render_template, request, redirect, url_for, flash
 
@@ -24,6 +25,11 @@ def about():
     """Render the website's about page."""
     return render_template('about.html', name="Mary Jane")
 
+@app.route('/profile/')
+def profile():
+    """Render the profile page."""
+    return render_template('profile.html',name="Abigail Miles",location="Kingston,Jamaica"
+
 
 ###
 # The functions below should be applicable to all Flask apps.
@@ -35,6 +41,12 @@ def send_text_file(file_name):
     file_dot_text = file_name + '.txt'
     return app.send_static_file(file_dot_text)
 
+
+def format_date_joined(date):
+    now = datetime.datetime.now()
+    date_joined = datetime.date(2019, 2, 7)
+
+    print date_joined.strfttime("%B, %Y")
 
 @app.after_request
 def add_header(response):

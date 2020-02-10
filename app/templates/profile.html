@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block main %}
+<div id="container0">
+        <div id="container1">
+            <div id="container2"class="center">
+            <img src="{{url_for('static', filename='AMweb.jpg', width=100)}}" />
+            </div>
+            <div id="container3">
+                <h2>{{ name }}</h2>
+                <p>@{{ username }}</p>
+                <p>{{ location }}</p>
+                <p>joined {{date}}</p>
+            </div>
+        </div>
+        <div id="container4">
+            <div id="container5">
+            <p>My name is Abigail Miles. I am an undergraduate student at the University of the West Indies.
+            I am presently pursuing a degree in Software Engineering. 
+            I find these aspects of Computing very interesting because I enjoy learning about them and I also enjoy practicing the development in these areas.</p>
+            </div>
+            <div id="container6"class="center">
+            <div id="container" >
+                <p>7</p> <br>
+                <p>Posts</p>
+            </div>
+            <div>
+                <p>100</p> <br>
+                <p>Following</p>
+            </div>
+            <div>
+                <p>200</p> <br>
+                <p>Followers</p>
+            </div>
+            </div>
+            <div class="center">
+                <button  type="button" id="follow"name="Follow">Follow</button>
+            </div>
+        </div>
+    </div>
+    
+
+{% endblock %}
